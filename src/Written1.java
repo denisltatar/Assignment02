@@ -1,8 +1,8 @@
-//a. True
+a. True
 b. True
 c. False
 d. true
 e. False 
 f. True
-g. 
+g. False
 h. True

@@ -104,54 +104,68 @@ public class A2Q5 {
         denis.setLabel("K");
         fineas.setLabel("T");
         
-        denis.setColor(Color.blue);
+        denis.setColor(Color.red);
+        fineas.setColor(Color.white);
         
-       denis.move();
-       denis.turnLeft();
+        denis.move();
+        denis.turnLeft();
+        denis.pickThing();
      
       while(denis.frontIsClear()){
-           denis.pickThing();
-           denis.move();
-           denis.pickThing();
-           denis.move();
-           denis.pickThing();
-           denis.move();
-           denis.pickThing();
-           denis.move();
-       }
-      if(!denis.frontIsClear()){
-           denis.turnLeft();
-           denis.turnLeft();
-           denis.turnLeft();
-           denis.move();
-           denis.pickThing();
-           denis.turnLeft();
-           denis.turnLeft();
-           denis.turnLeft();
-           denis.move();
-           denis.move();
-           denis.pickThing();
-           denis.move();
-           denis.move();
+          denis.move();
+          if(denis.canPickThing()){
+              denis.pickThing();
+          }
        }
       
-      denis.turnLeft();
-      denis.move();
-      denis.move();
-      denis.turnLeft();
-           
+      if(!denis.frontIsClear()){
+          denis.turnLeft();
+          denis.turnLeft();
+          denis.turnLeft(); 
+      }
+      
       while(denis.frontIsClear()){
-         denis.move();
-         denis.move();
-         denis.move();
-         denis.turnLeft();   
-         denis.turnLeft();
-         denis.move();
-         denis.pickThing();
-         denis.move();
-         denis.pickThing();
-         denis.move();
+      denis.move();
+      }
+      
+      if(denis.canPickThing()){
+          denis.pickThing();
+      }
+      
+      if(!denis.frontIsClear()) {
+          denis.turnLeft();
+          denis.turnLeft();
+          denis.turnLeft();
+      }
+      
+      while(denis.frontIsClear()){
+          denis.move();
+      if(denis.canPickThing()){
+              denis.pickThing();
+          }
        }
+      
+      denis.putThing();
+      denis.turnLeft();
+      denis.move();
+      denis.move();
+      denis.turnLeft();
+      
+      while(denis.frontIsClear()){
+          denis.move();
+          if(denis.canPickThing()){
+                denis.pickThing();
+        }
+      }
+      
+      if(!denis.frontIsClear()){
+        denis.turnLeft();
+        denis.turnLeft();
+      while(denis.frontIsClear()){
+        denis.move();
+      }
+      
+      denis.putThing();
       denis.turnLeft();
       denis.move();
       denis.move();
@@ -162,26 +176,42 @@ public class A2Q5 {
       while(denis.frontIsClear()){
           denis.move();
           if(denis.canPickThing()){
-                denis.pickThing();
-            }
-//ADD IF STATEMENT (IF FRONT IS CLEAR, IF PICK THING)
+              denis.pickThing();
+          }
       }
       
+      if(!denis.frontIsClear()){
+          denis.turnLeft();
+          denis.move();
+          denis.pickThing();
+          denis.turnLeft();
+      }
+      
+      while(denis.frontIsClear()){
+          denis.move();
+          if(denis.canPickThing()){
+              denis.pickThing();
+          }
+      }
+      
+      denis.putThing();
       denis.turnLeft();
-      denis.move();
-      denis.move();
+
+      while(denis.frontIsClear()){
+          denis.move();
+      }
       
       while(fineas.frontIsClear()){
-            fineas.move();
-            if(fineas.canPickThing()){
-                fineas.pickThing();
-            }
-            
-            if(fineas.countThingsInBackpack()==3){
-            break;
+          fineas.move();
+          if(fineas.canPickThing()){
+              fineas.pickThing();
+            }    
+         } 
+      
+      while(denis.frontIsClear()){
+         if(fineas.countThingsInBackpack()==3){
+       }
       }
-    }
-      fineas.move();
-      fineas.move();
-  }
+     }
+   }
 }

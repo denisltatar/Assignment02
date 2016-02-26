@@ -42,9 +42,9 @@ public class A2Q2 {
         
         denis.setLabel("D");
 
-        while (!denis.canPickThing()) {
+        while (!denis.canPickThing()){
 
-            if (!denis.frontIsClear()) {
+            if (!denis.frontIsClear()){
                 denis.turnLeft();
                 denis.move();
                 denis.turnLeft();
