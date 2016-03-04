@@ -1,7 +1,7 @@
 a. True
 b. True
 c. False
-d. true
+d. False
 e. False 
 f. True
 g. False

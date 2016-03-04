@@ -39,12 +39,12 @@ public class A2Q2 {
         new Wall(Kitchener, 2, 9, Direction.SOUTH);
 
         new Thing(Kitchener, 2, 9);
-        
+
         denis.setLabel("D");
 
-        while (!denis.canPickThing()){
+        while (!denis.canPickThing()) {
 
-            if (!denis.frontIsClear()){
+            if (!denis.frontIsClear()) {
                 denis.turnLeft();
                 denis.move();
                 denis.turnLeft();

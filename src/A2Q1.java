@@ -8,7 +8,6 @@ import becker.robots.Thing;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author tatad6701
@@ -22,7 +21,7 @@ public class A2Q1 {
         // TODO code application logic here
         City Kitchener = new City();
         Robot denis = new Robot(Kitchener, 1, 1, Direction.EAST);
-        
+
         new Thing(Kitchener, 1, 2);
         new Thing(Kitchener, 1, 3);
         new Thing(Kitchener, 1, 4);
@@ -33,13 +32,13 @@ public class A2Q1 {
         new Thing(Kitchener, 1, 9);
         new Thing(Kitchener, 1, 10);
         new Thing(Kitchener, 1, 11);
-    
-        while(denis.frontIsClear()){
+
+        while (denis.frontIsClear()) {
             denis.move();
             denis.pickThing();
-            if(denis.countThingsInBackpack()==7){
-            break;
-    }        
+            if (denis.countThingsInBackpack() == 7) {
+                break;
+            }
         }
         denis.move();
         denis.move();
@@ -47,4 +46,3 @@ public class A2Q1 {
         denis.move();
     }
 }
-
